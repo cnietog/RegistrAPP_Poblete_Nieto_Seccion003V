@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Restablecer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+
+    <ion-item>
+      <ion-label position="floating">Correo Institucional :</ion-label>
+      <ion-input type="email" placeholder=""
+                 name="correo" [(ngModel)]="usuario.correo" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono:</ion-label>
+      <ion-input type="text" placeholder=""
+                 name="telefono" [(ngModel)]="usuario.telefono" required></ion-input>
+    </ion-item>
+
+    <ion-button [disabled] ="formulario.invalid"
+            type="submit" expand="full" routerLink="/inicio">
+      Enviar Solicitud
+    </ion-button>
+    
+
+
+  </form>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Problema</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Tienes un problema al enviar una Solicitud
+      comuníquese a la Mesa de Ayuda 800 800 800
+
+
+    </ion-card-content>
+    
+
+  </ion-card>
+  
+</ion-content>

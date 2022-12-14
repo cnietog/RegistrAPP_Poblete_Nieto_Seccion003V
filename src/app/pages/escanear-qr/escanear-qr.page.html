@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio-fake"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Docente QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Escanear QR</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <icon-card>
+          <img src="assets/images/QR_Ejemplo.jpg" class="ion-padding">
+        </icon-card>
+      </ion-card-content>
+      
+    </ion-card>
+   <!-- <ion-button expand="full" (click)="presentAlert()">Escanear</ion-button> -->
+   
+   <ion-button expand="full"routerLink="/a" >Alumno Registrado</ion-button>
+   <ion-button expand="full"routerLink="/inicio-fake-d" >Volver</ion-button>
+</ion-content>
